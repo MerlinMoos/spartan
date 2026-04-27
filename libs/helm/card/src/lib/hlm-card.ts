@@ -1,10 +1,6 @@
 import { Directive, input } from '@angular/core';
 import { classes } from '@spartan-ng/helm/utils';
-import { injectHlmCardConfig } from './hlm-card.token';
-
-export type HlmCardConfig = {
-	size: 'sm' | 'default';
-};
+import { HlmCardConfig, injectHlmCardConfig } from './hlm-card.token';
 
 @Directive({
 	selector: '[hlmCard],hlm-card',

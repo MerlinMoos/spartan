@@ -3106,6 +3106,11 @@ exports[`generate-ui-docs executor produces stable output 1`] = `
             "required": false,
             "type": "string | undefined",
           },
+          {
+            "name": "forceInvalid",
+            "required": false,
+            "type": "boolean",
+          },
         ],
         "models": [],
         "outputs": [],
@@ -3114,13 +3119,7 @@ exports[`generate-ui-docs executor produces stable output 1`] = `
     },
     "helm": {
       "HlmInput": {
-        "inputs": [
-          {
-            "name": "error",
-            "required": false,
-            "type": "InputVariants['error']",
-          },
-        ],
+        "inputs": [],
         "models": [],
         "outputs": [],
         "selector": "[hlmInput]",
@@ -3145,7 +3144,7 @@ exports[`generate-ui-docs executor produces stable output 1`] = `
         ],
         "models": [],
         "outputs": [],
-        "selector": "hlm-input-group-addon,[hlmInputGroupAddon]",
+        "selector": "[hlmInputGroupAddon],hlm-input-group-addon",
       },
       "HlmInputGroupButton": {
         "inputs": [
@@ -3174,7 +3173,7 @@ exports[`generate-ui-docs executor produces stable output 1`] = `
         "inputs": [],
         "models": [],
         "outputs": [],
-        "selector": "span[hlmInputGroupText]",
+        "selector": "[hlmInputGroupText],hlm-input-group-text",
       },
       "HlmInputGroupTextarea": {
         "inputs": [],
@@ -5757,6 +5756,11 @@ exports[`generate-ui-docs executor produces stable output 1`] = `
             "required": false,
             "type": "string | undefined",
           },
+          {
+            "name": "forceInvalid",
+            "required": false,
+            "type": "boolean",
+          },
         ],
         "models": [],
         "outputs": [],
@@ -5765,13 +5769,7 @@ exports[`generate-ui-docs executor produces stable output 1`] = `
     },
     "helm": {
       "HlmTextarea": {
-        "inputs": [
-          {
-            "name": "error",
-            "required": false,
-            "type": "TextareaVariants['error']",
-          },
-        ],
+        "inputs": [],
         "models": [],
         "outputs": [],
         "selector": "[hlmTextarea]",

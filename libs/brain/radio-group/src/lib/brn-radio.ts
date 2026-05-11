@@ -12,7 +12,6 @@ import {
 	output,
 	viewChild,
 } from '@angular/core';
-import { BrnField, provideBrnLabelable } from '@spartan-ng/brain/field';
 import { injectBrnRadioGroup } from './brn-radio-group.token';
 
 export class BrnRadioChange<T> {
@@ -29,7 +28,6 @@ const INPUT_POST_FIX = '-input';
 @Component({
 	selector: 'brn-radio',
 	exportAs: 'brnRadio',
-	providers: [provideBrnLabelable(BrnRadio)],
 	changeDetection: ChangeDetectionStrategy.OnPush,
 	host: {
 		class: 'brn-radio',
@@ -79,7 +77,6 @@ export class BrnRadio<T = unknown> implements OnDestroy {
 	private static _nextUniqueId = 0;
 	private readonly _focusMonitor = inject(FocusMonitor);
 	private readonly _elementRef = inject(ElementRef);
-	private readonly _field = inject(BrnField, { optional: true });
 	protected readonly _radioGroup = injectBrnRadioGroup<T>();
 
 	/**
@@ -147,10 +144,7 @@ export class BrnRadio<T = unknown> implements OnDestroy {
 
 	protected readonly _inputElement = viewChild.required<ElementRef<HTMLInputElement>>('input');
 
-	public readonly labelableId = this._inputId;
-
 	constructor() {
-		this._field?.registerLabelable(this);
 		this._focusMonitor.monitor(this._elementRef, true);
 	}
 
